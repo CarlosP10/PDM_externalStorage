@@ -36,11 +36,11 @@ class MainActivity : AppCompatActivity() {
             openFile.write(content)
             openFile.flush()
             openFile.close()
-            Toast.makeText(this, "Data saved correctly", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Guardado correctamente", Toast.LENGTH_SHORT).show()
             fileTitle.setText("")
             fileContent.setText("")
         } catch (e:IOException){
-            Toast.makeText(this, "Could not save tha data", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "No se pudo guardar", Toast.LENGTH_SHORT).show()
         }
     }
 
@@ -63,7 +63,7 @@ class MainActivity : AppCompatActivity() {
             openFile.close()
             fileContent.setText(fullContent)
         } catch (e:IOException){
-            Toast.makeText(this, "Error reading file", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Error al leer el contenido", Toast.LENGTH_SHORT).show()
         }
     }
 }
